@@ -19,7 +19,7 @@ if not os.path.isfile(path):
     exit()
 
 # Загружаем модель распознавания речи whisper
-model = whisper.load_model("small") #base, small, medium
+model = whisper.load_model("medium") #base, small, medium
 
 # Транскрибируем файл и сохраняем результат в переменную result
 result = model.transcribe(path, fp16=False)
