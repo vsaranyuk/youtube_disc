@@ -29,7 +29,7 @@ audio_stream.download(output_path=output_path, filename=filename)
 
 print(f"Audio downloaded to {output_path}/{filename}")
 
-model = whisper.load_model ("base") #base, small, medium
+model = whisper.load_model ("large") #base, small, medium, large -- https://github.com/openai/whisper/blob/main/README.md
 result = model.transcribe("Youtubeaudios/audio.mp3", fp16=False)
 print(result["text" ])
 
